@@ -7,8 +7,10 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       rules: {
-        '@typescript-eslint/no-shadow': ['error'],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['off'],
         'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': ['error'],
         'no-undef': 'off',
       },
     },

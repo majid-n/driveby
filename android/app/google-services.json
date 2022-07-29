@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "883110208819",
+    "project_id": "homefixserver",
+    "storage_bucket": "homefixserver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883110208819:android:b4bee915c2053055ae4a46",
+        "android_client_info": {
+          "package_name": "com.driveby"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883110208819-u3rf6upj18o093q90o8gns9gmahc6ule.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.driveby",
+            "certificate_hash": "38a49e89a2164d97eb42a0d57a2ae05b9224c330"
+          }
+        },
+        {
+          "client_id": "883110208819-qkonl7hgd3boj8ul3cnt41cr1o9iaaam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr3j8WAjAEG80u6n5npoAvuOiUsZoh59Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883110208819-qkonl7hgd3boj8ul3cnt41cr1o9iaaam.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "883110208819-is26ts955s9l5khtnqc9rbctonn9kuck.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.majid.homefix"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
