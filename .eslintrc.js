@@ -12,6 +12,7 @@ module.exports = {
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': ['error'],
         'no-undef': 'off',
+        'prettier/prettier': ['error', { endOfLine: 'auto' }],
       },
     },
   ],

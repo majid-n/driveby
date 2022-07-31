@@ -1,14 +1,14 @@
 import React from 'react';
 import { NavProps } from '../core/types';
-import { Background, Button, Header, Logo, Paragraph } from '../components/theme';
+import { Background, Button, Header, Icon, Logo, Paragraph } from '../components/theme';
 
 const HomeScreen = ({ navigation }: NavProps) => {
   return (
     <Background>
       <Logo />
-      <Header>Home Fix</Header>
+      <Header>DriveBy</Header>
 
-      <Paragraph>The easiest way to fix you house problems.</Paragraph>
+      <Paragraph>The easiest way to get there.</Paragraph>
       <Button mode="contained" onPress={() => navigation.navigate('Login')}>
         Login
       </Button>

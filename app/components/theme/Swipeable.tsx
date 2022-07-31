@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 import { RectButton, Swipeable as SWP } from 'react-native-gesture-handler';
+import Icon from './Icon';
 
 interface Props extends React.ComponentProps<any> {
   // TODO: add modes
@@ -19,10 +20,11 @@ const Swipeable = (mainProps: Props) => {
     mainProps.onPress && typeof mainProps.onPress === 'function' && mainProps.onPress(id);
   };
 
-  const CreateRectButton = (props: Pick<SwipeableAction, 'id' | 'text' | 'color'>) => {
+  const CreateRectButton = (props: SwipeableAction) => {
     return (
       <RectButton style={[styles.action, { backgroundColor: props.color }]} onPress={() => btnPressed(props.id)}>
-        <Text style={styles.actionText}>{props.text}</Text>
+        {props.icon && <Icon style={styles.actionText} name={props.icon} />}
+        {props.text && <Text style={styles.actionText}>{props.text}</Text>}
       </RectButton>
     );
   };
@@ -31,7 +33,7 @@ const Swipeable = (mainProps: Props) => {
       inputRange: props.fullRow ? [0, 50, 100, 101] : [0, 1],
       outputRange: props.fullRow ? [-20, 0, 0, 1] : [index * (mainProps.buttonWidth || 70), 0],
     });
-    const rectBtn = <CreateRectButton id={props.id} text={props.text} color={props.color || '#ccc'} />;
+    const rectBtn = <CreateRectButton {...props} color={props.color || '#ccc'} />;
     return (
       <Fragment key={`key${index}`}>
         {true ? <Animated.View style={{ flex: 1, transform: [{ translateX: 0 }] }}>{rectBtn}</Animated.View> : rectBtn}
@@ -77,6 +79,8 @@ const Swipeable = (mainProps: Props) => {
 const styles = StyleSheet.create({
   action: {
     flex: 1,
+    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -98,6 +102,7 @@ export type SwipeableAction = {
   id: string;
   text: string;
   color?: string;
+  icon?: string;
   side?: 'left' | 'right';
   fullRow?: boolean;
 };

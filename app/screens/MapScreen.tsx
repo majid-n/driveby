@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-import MapView from 'react-native-maps';
+import { Dimensions, Platform, StyleSheet, View } from 'react-native';
+import MapView, { Marker } from 'react-native-maps';
 import { AppBar } from '../components/theme';
 import { DrawerNavProps } from '../core/types';
 
@@ -17,7 +17,9 @@ const MapScreen = ({ navigation }: DrawerNavProps) => {
       <AppBar title="Maps" subtitle="maps description" onPress={navigation.toggleDrawer} actions={[{ id: 'menu', icon: 'menu', side: 'left' }]} />
 
       <View style={styles.container}>
-        <MapView style={styles.map} initialRegion={region} onRegionChange={setRegion} />
+        <MapView style={styles.map} initialRegion={region} onRegionChange={setRegion}>
+          <Marker key={0} coordinate={region} title="title" description="desc" />
+        </MapView>
       </View>
     </Fragment>
   );
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'flex-end',
     alignItems: 'center',
-    marginTop: 100,
+    marginTop: 56,
   },
 });
 

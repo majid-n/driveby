@@ -13,7 +13,10 @@ interface Props {
 
 const ProductItem = (props: Props) => {
   const [image, setImage] = useState('');
-  const buttons: SwipeableAction[] = [{ id: 'delete', text: 'Delete', side: 'right', color: '#dd2c00', fullRow: true }];
+  const buttons: SwipeableAction[] = [
+    { id: 'delete', text: 'Delete', icon: 'trash-2', side: 'right', color: '#dd2c00', fullRow: true },
+    { id: 'archive', text: 'Archive', icon: 'plus', side: 'left', color: 'green', fullRow: false },
+  ];
 
   useEffect(() => {
     if (props?.item?.image) getImage(props.item.image);
@@ -30,7 +33,7 @@ const ProductItem = (props: Props) => {
   };
 
   return (
-    <Swipeable buttons={buttons} onPress={text => props.onDelete(props.item.id)}>
+    <Swipeable buttons={buttons} buttonWidth={80} onPress={text => props.onDelete(props.item.id)}>
       <RectButton style={styles.rectButton} onPress={() => Alert.alert(props.item.name)}>
         {!!image && (
           <View>

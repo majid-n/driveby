@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "resources/driveby.json",
+      "sha1": "9bd5e3d425c3b31988b8a0ecb8d960272b173963"
+    },
+    {
+      "path": "resources/fonts/driveby.ttf",
+      "sha1": "ac9071b30020d76a2231435661a5b86f0cf8afde"
+    },
+    {
+      "path": "resources/logo.png",
+      "sha1": "9904bb33f0e044efeb70d4fc21ede15c8bde897c"
+    },
+    {
+      "path": "resources/logo@2x.png",
+      "sha1": "89a5600ea62321fdacb5d3d35eaf80259b9a249a"
+    }
+  ]
+}

@@ -6,5 +6,11 @@ module.exports = {
   trailingComma: 'all',
   useTabs: false,
   printWidth: 150,
-  endOfLine: 'auto'
+  endOfLine: 'auto',
+  'prettier/prettier': [
+    'error',
+    {
+      'endOfLine': 'auto',
+    }
+  ]
 };
